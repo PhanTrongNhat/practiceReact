@@ -1,0 +1,15 @@
+export { default as PromotionSection } from './PromotionSection';
+export { default as CarouselSection } from './CarouselSection';
+export { default as ArrivalsSection } from './ArrivalsSection';
+export { default as MarqueeSection } from './MarqueeSection';
+export { default as CollectionSection } from './CollectionSection';
+export { default as CustomerSection } from './CustomerSection';
+export { default as SignUpSection } from './SignUpSection';
+export { default as DesignerSection } from './DesignerSection';
+export { default as ExpertSection } from './ExpertSection';
+export { default as KindOfDesignSection } from './KindOfDesignSection';
+export { default as InspirationSection } from './InspirationSection';
+export { default as StoriesSection } from './StoriesSection';
+export { default as FeatureSection } from './FeatureSection';
+export { default as RoomSection } from './RoomSection';
+export { default as ScrollBackgroundSection } from './ScrollBackgroundSection';
