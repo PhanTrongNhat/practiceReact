@@ -84,10 +84,6 @@ const ScrollBackgroundDesktop = () => {
     }
   }, []);
 
-  React.useEffect(() => {
-    console.log('data1', offsetHeight);
-  }, [offsetHeight]);
-
   return (
     <Wrapper>
       <ScrollImage

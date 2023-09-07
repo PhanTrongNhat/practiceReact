@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 
-export const Wrapper = styled.div<{ height: number }>`
-  height: ${p => p.height}px;
+export const Wrapper = styled.div<{ height?: number }>`
+  ${p => p.height && ` height: ${p.height}px;`}
   width: 100%;
   display: flex;
   align-items: center;

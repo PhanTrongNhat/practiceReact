@@ -12,14 +12,19 @@ import React from 'react';
 
 const AboutDesktop = () => {
   const [height, setHeight] = React.useState(0);
+  const [isReload, setIsReload] = React.useState(false);
 
   React.useEffect(() => {
     const componentHeight = window.document.getElementById('background-image');
 
     if (componentHeight) {
-      setHeight(componentHeight.offsetHeight);
+      if (componentHeight.offsetHeight == 0) {
+        setIsReload(!isReload);
+      } else {
+        setHeight(componentHeight.offsetHeight);
+      }
     }
-  }, [window.document.getElementById('background-image')?.offsetHeight]);
+  }, [isReload]);
 
   return (
     <Wrapper height={height}>
