@@ -14,26 +14,13 @@ import {
   Wrapper,
 } from './styledMobile';
 import { ArrowButton } from 'components';
+import { FeatureType } from './index';
 
-const FeatureMobile = () => {
-  const [active, setActive] = React.useState(0);
-
-  const handleChangeActiveLeft = () => {
-    if (active == 0) {
-      setActive(FeatureData.length - 1);
-    } else {
-      setActive(active - 1);
-    }
-  };
-
-  const handleChangeActiveRight = () => {
-    if (active == FeatureData.length - 1) {
-      setActive(0);
-    } else {
-      setActive(active + 1);
-    }
-  };
-
+const FeatureMobile = ({
+  active,
+  handleChangeRight,
+  handleChangeLeft,
+}: FeatureType) => {
   return (
     <Wrapper>
       <ContentWrapper>
@@ -63,7 +50,7 @@ const FeatureMobile = () => {
                         width={'40px'}
                         iconWidth={15}
                         isArrowRight={false}
-                        handleClick={() => handleChangeActiveLeft()}
+                        handleClick={() => handleChangeLeft()}
                         noneEvent={false}
                         borderColor={'#f1f1f1'}
                         color={'#272727'}
@@ -72,7 +59,7 @@ const FeatureMobile = () => {
                         width={'40px'}
                         iconWidth={15}
                         isArrowRight={true}
-                        handleClick={() => handleChangeActiveRight()}
+                        handleClick={() => handleChangeRight()}
                         noneEvent={false}
                         borderColor={'#f1f1f1'}
                         color={'#272727'}

@@ -24,17 +24,16 @@ import {
 import React from 'react';
 import {
   AmericanExpressIcon,
-  ArrowRightIcon,
   DinerClubIcon,
   FacebookIcon,
   PayPalIcon,
   VisaIcon,
-} from '../../Icons';
+  InstagramIcon,
+  MasterCardIcon,
+  DiscoverIcon,
+} from 'components';
 import { MobileChevronMajor } from '@shopify/polaris-icons';
-import { FooterListData } from '../../../pages/Home/data';
-import { InstagramIcon } from '../../Icons/InstagramIcon';
-import { MasterCardIcon } from '../../Icons/MasterCardIcon';
-import { DiscoverIcon } from '../../Icons/DiscoverIcon';
+import { FooterListData } from 'pages/Home/data';
 
 const FooterDesktop = () => {
   return (

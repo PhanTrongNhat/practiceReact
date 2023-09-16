@@ -10,23 +10,9 @@ import {
 } from './styledMobile';
 import { PlusIcon } from 'components';
 import React from 'react';
+import { AboutType } from '.';
 
-const AboutMobile = () => {
-  const [height, setHeight] = React.useState(0);
-  const [isReload, setIsReload] = React.useState(false);
-
-  React.useEffect(() => {
-    const componentHeight = window.document.getElementById('background-image');
-
-    if (componentHeight) {
-      if (componentHeight.offsetHeight == 0) {
-        setIsReload(!isReload);
-      } else {
-        setHeight(componentHeight.offsetHeight);
-      }
-    }
-  }, [isReload]);
-
+const AboutMobile = ({ height }: AboutType) => {
   return (
     <Wrapper height={height}>
       <Content>

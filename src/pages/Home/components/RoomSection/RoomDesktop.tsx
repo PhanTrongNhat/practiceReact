@@ -11,28 +11,15 @@ import {
 
 import React from 'react';
 import { RoomData } from '../../data';
-import Index from '../../../../components/ProductCard';
+import ProductCard from 'components/ProductCard';
 import { ArrowButton } from 'components';
+import { RoomType } from './index';
 
-const RoomDesktop = () => {
-  const [active, setActive] = React.useState(0);
-
-  const handleChangeActiveLeft = () => {
-    if (active == 0) {
-      setActive(RoomData.length - 1);
-    } else {
-      setActive(active - 1);
-    }
-  };
-
-  const handleChangeActiveRight = () => {
-    if (active == RoomData.length - 1) {
-      setActive(0);
-    } else {
-      setActive(active + 1);
-    }
-  };
-
+const RoomDesktop = ({
+  handleChangeRight,
+  handleChangeLeft,
+  active,
+}: RoomType) => {
   return (
     <Wrapper>
       <ImageWrapper>
@@ -54,7 +41,7 @@ const RoomDesktop = () => {
         {RoomData?.map((item, index) => {
           return (
             <ProductsWrapper active={index == active}>
-              <Index
+              <ProductCard
                 key={index}
                 title={item.title}
                 branch={item.branch}
@@ -76,7 +63,7 @@ const RoomDesktop = () => {
             width={'48px'}
             iconWidth={15}
             isArrowRight={false}
-            handleClick={() => handleChangeActiveLeft()}
+            handleClick={() => handleChangeLeft && handleChangeLeft()}
             noneEvent={false}
             borderColor={'#f1f1f1'}
             color={'#272727'}
@@ -85,7 +72,7 @@ const RoomDesktop = () => {
             width={'48px'}
             iconWidth={15}
             isArrowRight={true}
-            handleClick={() => handleChangeActiveRight()}
+            handleClick={() => handleChangeRight && handleChangeRight()}
             noneEvent={false}
             borderColor={'#f1f1f1'}
             color={'#272727'}

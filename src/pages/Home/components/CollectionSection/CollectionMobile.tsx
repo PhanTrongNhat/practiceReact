@@ -17,42 +17,15 @@ import {
 } from './styledMobile';
 import { MobileChevronMajor } from '@shopify/polaris-icons';
 import { CollectionData } from '../../data';
-import { ArrowButton } from '../../../../components';
+import { CollectionType } from './index';
 
-const CollectionMobile = () => {
-  const [offsetWidthScroll, setOffsetWidthScroll] = React.useState(0);
-  const [offsetWidth, setOffsetWidth] = React.useState(0);
-  const [scrollLeft, setScrollLeft] = React.useState(0);
-
-  const handleChangeLeft = () => {
-    const collection = window.document.getElementById('collection-wrapper');
-
-    if (collection && collection.scrollLeft > 0) {
-      collection.scrollLeft -= 500;
-      setScrollLeft(collection.scrollLeft - 500);
-    } else {
-      setScrollLeft(0);
-    }
-  };
-
-  const handleChangeRight = () => {
-    const collection = window.document.getElementById('collection-wrapper');
-
-    if (collection) {
-      collection.scrollLeft += 500;
-      setScrollLeft(collection.scrollLeft + 500);
-    }
-  };
-
-  React.useEffect(() => {
-    const collection = window.document.getElementById('collection-wrapper');
-
-    if (collection) {
-      setOffsetWidth(collection.offsetWidth);
-      setOffsetWidthScroll(collection.scrollWidth);
-    }
-  }, []);
-
+const CollectionMobile = ({
+  handleChangeRight,
+  handleChangeLeft,
+  scrollLeft,
+  offsetWidthScroll,
+  offsetWidth,
+}: CollectionType) => {
   return (
     <Wrapper>
       <CollectionHeader>
@@ -90,41 +63,6 @@ const CollectionMobile = () => {
             );
           })}
         </CollectionWrapper>
-        <PreButton
-          noneEvent={scrollLeft == 0 || offsetWidthScroll == offsetWidth}
-        >
-          <ArrowButton
-            width={'48px'}
-            iconWidth={20}
-            isArrowRight={false}
-            handleClick={() => handleChangeLeft()}
-            noneEvent={scrollLeft == 0 || offsetWidthScroll == offsetWidth}
-            borderColor={'#f1f1f1'}
-            color={'#272727'}
-          ></ArrowButton>{' '}
-          {/*<MobileChevronMajor*/}
-          {/*  width={20}*/}
-          {/*  height={20}*/}
-          {/*  color={'#000'}*/}
-          {/*></MobileChevronMajor>*/}
-          {/*<ArrowLeftIcon width={20} height={20} color={'#000'}></ArrowLeftIcon>*/}
-        </PreButton>
-        <NextButton
-          noneEvent={
-            scrollLeft + offsetWidth == offsetWidthScroll ||
-            offsetWidthScroll == offsetWidth
-          }
-        >
-          <ArrowButton
-            width={'48px'}
-            iconWidth={20}
-            isArrowRight={true}
-            handleClick={() => handleChangeRight()}
-            noneEvent={scrollLeft == 0 || offsetWidthScroll == offsetWidth}
-            borderColor={'#f1f1f1'}
-            color={'#272727'}
-          ></ArrowButton>{' '}
-        </NextButton>
       </CarouselWrapper>
     </Wrapper>
   );

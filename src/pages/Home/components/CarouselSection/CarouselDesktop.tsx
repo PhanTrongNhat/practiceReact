@@ -16,34 +16,13 @@ import { CarouselData } from '../../data';
 
 import React from 'react';
 import { ArrowButton } from 'components';
+import { CarouselType } from './index';
 
-const CarouselDesktop = () => {
-  const [activeCount, setActiveCount] = React.useState(0);
-
-  const handleChangeLeft = () => {
-    if (activeCount == 0) {
-      setActiveCount(CarouselData.length - 1);
-    } else {
-      setActiveCount(activeCount - 1);
-    }
-  };
-
-  const handleChangeRight = () => {
-    if (CarouselData.length - 1 == activeCount) {
-      setActiveCount(0);
-    } else {
-      setActiveCount(prevState => prevState + 1);
-    }
-  };
-
-  React.useEffect(() => {
-    const timer = setInterval(() => {
-      handleChangeRight();
-    }, 5000);
-
-    return () => clearInterval(timer);
-  }, [activeCount]);
-
+const CarouselDesktop = ({
+  handleChangeLeft,
+  handleChangeRight,
+  activeCount,
+}: CarouselType) => {
   return (
     <Wrapper>
       {CarouselData.map((item, index) => {

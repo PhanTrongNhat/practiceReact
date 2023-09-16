@@ -17,7 +17,7 @@ import {
   Wrapper,
 } from './styledMobile';
 import { MobileChevronMajor } from '@shopify/polaris-icons';
-import { CalendarIcon } from '../../../../components';
+import { CalendarIcon } from 'components';
 import React from 'react';
 
 const StoryMobile = () => {

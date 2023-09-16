@@ -10,7 +10,7 @@ import {
   Title,
   Wrapper,
 } from './styledMobile';
-import { TwentyIcon } from '../../../../components';
+import { TwentyIcon } from 'components';
 
 const InspirationMobile = () => {
   return (

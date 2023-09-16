@@ -9,23 +9,9 @@ import {
 } from './styled';
 import { PlusIcon } from 'components';
 import React from 'react';
+import { AboutType } from './index';
 
-const AboutDesktop = () => {
-  const [height, setHeight] = React.useState(0);
-  const [isReload, setIsReload] = React.useState(false);
-
-  React.useEffect(() => {
-    const componentHeight = window.document.getElementById('background-image');
-
-    if (componentHeight) {
-      if (componentHeight.offsetHeight == 0) {
-        setIsReload(!isReload);
-      } else {
-        setHeight(componentHeight.offsetHeight);
-      }
-    }
-  }, [isReload]);
-
+const AboutDesktop = ({ height }: AboutType) => {
   return (
     <Wrapper height={height}>
       <Content>

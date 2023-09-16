@@ -14,26 +14,13 @@ import {
 import { ArrowButton } from 'components';
 import { CustomerData } from '../../data';
 import React from 'react';
+import { CustomerType } from './index';
 
-const CustomerDesktop = () => {
-  const [active, setActive] = React.useState(0);
-
-  const handleChangeActiveLeft = () => {
-    if (active == 0) {
-      setActive(CustomerData.length - 1);
-    } else {
-      setActive(active - 1);
-    }
-  };
-
-  const handleChangeActiveRight = () => {
-    if (active == CustomerData.length - 1) {
-      setActive(0);
-    } else {
-      setActive(active + 1);
-    }
-  };
-
+const CustomerDesktop = ({
+  active,
+  handleChangeRight,
+  handleChangeLeft,
+}: CustomerType) => {
   return (
     <Wrapper>
       <ContentWrapper>
@@ -59,7 +46,7 @@ const CustomerDesktop = () => {
               width={'48px'}
               iconWidth={15}
               isArrowRight={false}
-              handleClick={() => handleChangeActiveLeft()}
+              handleClick={() => handleChangeLeft()}
               noneEvent={false}
               borderColor={'#f1f1f1'}
               color={'#fff'}
@@ -74,7 +61,7 @@ const CustomerDesktop = () => {
               width={'48px'}
               iconWidth={15}
               isArrowRight={true}
-              handleClick={() => handleChangeActiveRight()}
+              handleClick={() => handleChangeRight()}
               noneEvent={false}
               borderColor={'#f1f1f1'}
               color={'#fff'}

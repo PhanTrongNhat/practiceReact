@@ -18,41 +18,15 @@ import { MobileChevronMajor } from '@shopify/polaris-icons';
 import React from 'react';
 import { CollectionData } from '../../data';
 import { ArrowButton } from 'components';
+import { CollectionType } from './index';
 
-const CollectionDesktop = () => {
-  const [offsetWidthScroll, setOffsetWidthScroll] = React.useState(0);
-  const [offsetWidth, setOffsetWidth] = React.useState(0);
-  const [scrollLeft, setScrollLeft] = React.useState(0);
-
-  const handleChangeLeft = () => {
-    const collection = window.document.getElementById('collection-wrapper');
-
-    if (collection && collection.scrollLeft > 0) {
-      collection.scrollLeft -= 500;
-      setScrollLeft(collection.scrollLeft - 500);
-    } else {
-      setScrollLeft(0);
-    }
-  };
-
-  const handleChangeRight = () => {
-    const collection = window.document.getElementById('collection-wrapper');
-
-    if (collection) {
-      collection.scrollLeft += 500;
-      setScrollLeft(collection.scrollLeft + 500);
-    }
-  };
-
-  React.useEffect(() => {
-    const collection = window.document.getElementById('collection-wrapper');
-
-    if (collection) {
-      setOffsetWidth(collection.offsetWidth);
-      setOffsetWidthScroll(collection.scrollWidth);
-    }
-  }, []);
-
+const CollectionDesktop = ({
+  handleChangeRight,
+  handleChangeLeft,
+  scrollLeft,
+  offsetWidthScroll,
+  offsetWidth,
+}: CollectionType) => {
   return (
     <Wrapper>
       <CollectionHeader>

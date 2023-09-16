@@ -14,54 +14,18 @@ import {
 } from './styled';
 import { MobileChevronMajor } from '@shopify/polaris-icons';
 import React from 'react';
-import Index from '../../../../components/ProductCard';
+import ProductCard from 'components/ProductCard';
 import { ProductsData } from 'pages/Home/data';
 
 import { ArrowButton } from 'components';
+import { ArrivalsType } from './index';
 
-const ArrivalsDesktop = () => {
-  const [percent, setPercent] = React.useState(0);
-  const [percentInit, setPercentInit] = React.useState(0);
-
-  const handleChangeLeft = () => {
-    const productsWrapper = window.document.getElementById('product-wrapper');
-
-    if (productsWrapper && productsWrapper.scrollLeft > 0) {
-      productsWrapper.scrollLeft -= 500;
-
-      setPercent(
-        ((productsWrapper.scrollLeft + productsWrapper.offsetWidth) * 100) /
-          productsWrapper.scrollWidth
-      );
-    }
-  };
-
-  const handleChangeRight = () => {
-    const productsWrapper = window.document.getElementById('product-wrapper');
-
-    if (productsWrapper) {
-      productsWrapper.scrollLeft += 500;
-
-      setPercent(
-        ((productsWrapper.scrollLeft + productsWrapper.offsetWidth) * 100) /
-          productsWrapper.scrollWidth
-      );
-    }
-  };
-
-  React.useEffect(() => {
-    const productsWrapper = window.document.getElementById('product-wrapper');
-
-    if (productsWrapper) {
-      setPercentInit(
-        (productsWrapper.offsetWidth * 100) / productsWrapper.scrollWidth
-      );
-      setPercent(
-        (productsWrapper.offsetWidth * 100) / productsWrapper.scrollWidth
-      );
-    }
-  }, []);
-
+const ArrivalsDesktop = ({
+  percent,
+  percentInit,
+  handleChangeLeft,
+  handleChangeRight,
+}: ArrivalsType) => {
   return (
     <Wrapper>
       <HeaderWrapper>
@@ -88,7 +52,7 @@ const ArrivalsDesktop = () => {
         <ProductWrapper id={'product-wrapper'}>
           {ProductsData?.map((item, index) => {
             return (
-              <Index
+              <ProductCard
                 key={index}
                 title={item.title}
                 branch={item.branch}

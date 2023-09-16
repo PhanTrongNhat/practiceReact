@@ -14,26 +14,14 @@ import {
 } from './styled';
 import { FeatureData } from '../../data';
 import { ArrowButton } from 'components';
+import { CustomerType } from '../CustomerSection';
+import { FeatureType } from './index';
 
-const FeatureDesktop = () => {
-  const [active, setActive] = React.useState(0);
-
-  const handleChangeActiveLeft = () => {
-    if (active == 0) {
-      setActive(FeatureData.length - 1);
-    } else {
-      setActive(active - 1);
-    }
-  };
-
-  const handleChangeActiveRight = () => {
-    if (active == FeatureData.length - 1) {
-      setActive(0);
-    } else {
-      setActive(active + 1);
-    }
-  };
-
+const FeatureDesktop = ({
+  active,
+  handleChangeRight,
+  handleChangeLeft,
+}: FeatureType) => {
   return (
     <Wrapper>
       <ContentWrapper>
@@ -63,7 +51,7 @@ const FeatureDesktop = () => {
                         width={'48px'}
                         iconWidth={15}
                         isArrowRight={false}
-                        handleClick={() => handleChangeActiveLeft()}
+                        handleClick={() => handleChangeLeft()}
                         noneEvent={false}
                         borderColor={'#f1f1f1'}
                         color={'#272727'}
@@ -72,7 +60,7 @@ const FeatureDesktop = () => {
                         width={'48px'}
                         iconWidth={15}
                         isArrowRight={true}
-                        handleClick={() => handleChangeActiveRight()}
+                        handleClick={() => handleChangeRight()}
                         noneEvent={false}
                         borderColor={'#f1f1f1'}
                         color={'#272727'}

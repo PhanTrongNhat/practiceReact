@@ -1,17 +1,8 @@
 import { Content, Count, Description, Title, Wrapper } from './styled';
 import React from 'react';
+import { KindOfDesignType } from './index';
 
-const KindOfDesignMobile = () => {
-  const [count, setCount] = React.useState(1000);
-
-  React.useEffect(() => {
-    const timer = setInterval(() => {
-      if (count < 2002) setCount(prevState => prevState + 10);
-    }, 1);
-
-    return () => clearInterval(timer);
-  }, []);
-
+const KindOfDesignMobile = ({ count }: KindOfDesignType) => {
   return (
     <Wrapper>
       <Content>

@@ -10,29 +10,11 @@ import {
   Wrapper,
 } from './styledMobile';
 import { RoomData } from '../../data';
-import Index from '../../../../components/ProductCard';
-import { ArrowButton, ProductCardMobile } from 'components';
+import { ProductCardMobile } from 'components';
 import React from 'react';
+import { RoomType } from './index';
 
-const RoomMobile = () => {
-  const [active, setActive] = React.useState(0);
-
-  const handleChangeActiveLeft = () => {
-    if (active == 0) {
-      setActive(RoomData.length - 1);
-    } else {
-      setActive(active - 1);
-    }
-  };
-
-  const handleChangeActiveRight = () => {
-    if (active == RoomData.length - 1) {
-      setActive(0);
-    } else {
-      setActive(active + 1);
-    }
-  };
-
+const RoomMobile = ({ active }: RoomType) => {
   return (
     <Wrapper>
       <Title>Shop the room</Title>
@@ -78,7 +60,7 @@ const RoomMobile = () => {
         {/*    width={'48px'}*/}
         {/*    iconWidth={15}*/}
         {/*    isArrowRight={false}*/}
-        {/*    handleClick={() => handleChangeActiveLeft()}*/}
+        {/*    handleClick={() => handleChangeLeft()}*/}
         {/*    noneEvent={false}*/}
         {/*    borderColor={'#f1f1f1'}*/}
         {/*    color={'#272727'}*/}
@@ -87,7 +69,7 @@ const RoomMobile = () => {
         {/*    width={'48px'}*/}
         {/*    iconWidth={15}*/}
         {/*    isArrowRight={true}*/}
-        {/*    handleClick={() => handleChangeActiveRight()}*/}
+        {/*    handleClick={() => handleChangeRight()}*/}
         {/*    noneEvent={false}*/}
         {/*    borderColor={'#f1f1f1'}*/}
         {/*    color={'#272727'}*/}

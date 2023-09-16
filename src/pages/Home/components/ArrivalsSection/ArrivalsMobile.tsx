@@ -14,53 +14,16 @@ import {
 } from './styledMobile';
 import { MobileChevronMajor } from '@shopify/polaris-icons';
 import { ProductsData } from '../../data';
-import Index from '../../../../components/ProductCard';
-import { ArrowButton } from '../../../../components';
+import { ArrowButton, ProductCard } from 'components';
 import React from 'react';
+import { ArrivalsType } from './index';
 
-const CarouselMobile = () => {
-  const [percent, setPercent] = React.useState(0);
-  const [percentInit, setPercentInit] = React.useState(0);
-
-  const handleChangeLeft = () => {
-    const productsWrapper = window.document.getElementById('product-wrapper');
-
-    if (productsWrapper && productsWrapper.scrollLeft > 0) {
-      productsWrapper.scrollLeft -= 500;
-
-      setPercent(
-        ((productsWrapper.scrollLeft + productsWrapper.offsetWidth) * 100) /
-          productsWrapper.scrollWidth
-      );
-    }
-  };
-
-  const handleChangeRight = () => {
-    const productsWrapper = window.document.getElementById('product-wrapper');
-
-    if (productsWrapper) {
-      productsWrapper.scrollLeft += 500;
-
-      setPercent(
-        ((productsWrapper.scrollLeft + productsWrapper.offsetWidth) * 100) /
-          productsWrapper.scrollWidth
-      );
-    }
-  };
-
-  React.useEffect(() => {
-    const productsWrapper = window.document.getElementById('product-wrapper');
-
-    if (productsWrapper) {
-      setPercentInit(
-        (productsWrapper.offsetWidth * 100) / productsWrapper.scrollWidth
-      );
-      setPercent(
-        (productsWrapper.offsetWidth * 100) / productsWrapper.scrollWidth
-      );
-    }
-  }, []);
-
+const CarouselMobile = ({
+  percent,
+  percentInit,
+  handleChangeLeft,
+  handleChangeRight,
+}: ArrivalsType) => {
   return (
     <Wrapper>
       <HeaderWrapper>
@@ -87,7 +50,7 @@ const CarouselMobile = () => {
         <ProductWrapper id={'product-wrapper'}>
           {ProductsData?.map((item, index) => {
             return (
-              <Index
+              <ProductCard
                 key={index}
                 title={item.title}
                 branch={item.branch}

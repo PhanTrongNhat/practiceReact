@@ -25,3 +25,6 @@ export { DinerClubIcon } from './DinerClubIcon';
 export { EmailIcon } from './EmailIcon';
 export { CartIcon } from './CartIcon';
 export { HambergerIcon } from './HambergerIcon';
+export { InstagramIcon } from './InstagramIcon';
+export { MasterCardIcon } from './MasterCardIcon';
+export { DiscoverIcon } from './DiscoverIcon';

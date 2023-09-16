@@ -1,5 +1,4 @@
 import styled, { keyframes } from 'styled-components';
-import { devices } from '../../utils';
 
 export const ImageAnimation = keyframes`
   from{

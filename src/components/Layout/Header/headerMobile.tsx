@@ -11,8 +11,7 @@ import {
   MenuWrapper,
   Wrapper,
 } from './styledMobile';
-import { CartIcon, DropDownIcon, SearchIcon, HambergerIcon } from '../../Icons';
-import { CartMajor, CustomersMajor, SearchMajor } from '@shopify/polaris-icons';
+import { CartIcon, SearchIcon, HambergerIcon } from 'components';
 
 const HeaderMobile = () => {
   const [isBackground, setIsBackground] = React.useState(false);

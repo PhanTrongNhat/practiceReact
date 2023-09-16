@@ -13,27 +13,14 @@ import {
   Name,
   Wrapper,
 } from './styledMobile';
-import { ArrowButton } from '../../../../components';
+import { ArrowButton } from 'components';
+import { CustomerType } from './index';
 
-const CustomerMobile = () => {
-  const [active, setActive] = React.useState(0);
-
-  const handleChangeActiveLeft = () => {
-    if (active == 0) {
-      setActive(CustomerData.length - 1);
-    } else {
-      setActive(active - 1);
-    }
-  };
-
-  const handleChangeActiveRight = () => {
-    if (active == CustomerData.length - 1) {
-      setActive(0);
-    } else {
-      setActive(active + 1);
-    }
-  };
-
+const CustomerMobile = ({
+  active,
+  handleChangeRight,
+  handleChangeLeft,
+}: CustomerType) => {
   return (
     <Wrapper>
       <ContentWrapper>
@@ -59,7 +46,7 @@ const CustomerMobile = () => {
               width={'48px'}
               iconWidth={15}
               isArrowRight={false}
-              handleClick={() => handleChangeActiveLeft()}
+              handleClick={() => handleChangeLeft()}
               noneEvent={false}
               borderColor={'rgba(255, 255, 255, 0.12)'}
               color={'#fff'}
@@ -74,7 +61,7 @@ const CustomerMobile = () => {
               width={'48px'}
               iconWidth={15}
               isArrowRight={true}
-              handleClick={() => handleChangeActiveRight()}
+              handleClick={() => handleChangeRight()}
               noneEvent={false}
               borderColor={'rgba(255, 255, 255, 0.12)'}
               color={'#fff'}

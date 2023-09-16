@@ -16,14 +16,14 @@ import {
   SignUpSection,
   StoriesSection,
 } from './components';
-import { Header } from '../../components';
+import { Header } from 'components';
 import styled from 'styled-components';
 
 const HomeMobile = () => {
   return (
     <>
       {' '}
-      {/*<PromotionSection></PromotionSection>*/}
+      <PromotionSection></PromotionSection>
       <Header></Header>
       <CarouselSection></CarouselSection>
       <ArrivalsSection></ArrivalsSection>

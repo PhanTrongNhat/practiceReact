@@ -1,17 +1,8 @@
 import React from 'react';
 import { Content, Count, Description, Title, Wrapper } from './styled';
+import { KindOfDesignType } from './index';
 
-const KindOfDesignDesktop = () => {
-  const [count, setCount] = React.useState(1000);
-
-  React.useEffect(() => {
-    const timer = setInterval(() => {
-      if (count < 2002) setCount(prevState => prevState + 10);
-    }, 1);
-
-    return () => clearInterval(timer);
-  }, []);
-
+const KindOfDesignDesktop = ({ count }: KindOfDesignType) => {
   return (
     <Wrapper>
       <Content>

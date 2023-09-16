@@ -1,10 +1,11 @@
 import styled, { keyframes } from 'styled-components';
 
 export const Wrapper = styled.div`
-  padding: 80px 48px;
+  padding: var(--space-top) var(--space-side);
   display: flex;
   gap: 2rem 1.25rem;
   flex-direction: column;
+  overflow: hidden;
 `;
 
 export const ViewAll = styled.div`
@@ -133,6 +134,10 @@ export const CollectionItemWrapper = styled.div`
       transform: scale(1.2);
     }
   }
+
+  &:first-child {
+    margin-left: var(--space-side);
+  }
 `;
 
 export const CollectionImage = styled.img`
@@ -199,6 +204,8 @@ export const CarouselWrapper = styled.div`
   justify-content: center;
   align-items: center;
   display: flex;
+  width: 100vw;
+  left: -20px;
 
   .carousel-button {
     background-color: white;

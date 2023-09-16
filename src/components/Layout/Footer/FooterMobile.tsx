@@ -23,17 +23,18 @@ import {
   Wrapper,
 } from './styledMobile';
 import { MobileChevronMajor } from '@shopify/polaris-icons';
-import { FooterListData } from '../../../pages/Home/data';
+import { FooterListData } from 'pages/Home/data';
 import {
   AmericanExpressIcon,
   DinerClubIcon,
   FacebookIcon,
   PayPalIcon,
   VisaIcon,
-} from '../../Icons';
-import { InstagramIcon } from '../../Icons/InstagramIcon';
-import { MasterCardIcon } from '../../Icons/MasterCardIcon';
-import { DiscoverIcon } from '../../Icons/DiscoverIcon';
+  InstagramIcon,
+  MasterCardIcon,
+  DiscoverIcon,
+} from 'components';
+
 import React from 'react';
 
 const FooterMobile = () => {
