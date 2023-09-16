@@ -82,7 +82,7 @@ export const InfoWrapper = styled.div`
 `;
 
 export const Info = styled.div`
-  width: 600px;
+  max-width: 600px;
   padding-bottom: 6rem;
 `;
 

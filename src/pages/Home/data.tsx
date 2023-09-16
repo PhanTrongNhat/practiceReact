@@ -241,22 +241,22 @@ export const FeatureData = [
     description:
       'High-quality means thoughtfully designed, well crafted, and built to last. At HAY, we strive to minimize our footstep on the planet while making durable products that we hope will live with you for a long time. We always hold ourselves to high standards, so each of our product categories has its own team of designers, technicians, and engineers.',
   },
-  // {
-  //   smallTitle: 'Passion',
-  //   title: 'Love of design',
-  //   image:
-  //     'https://impact-theme-home.myshopify.com/cdn/shop/files/Matin_Table_Lamp_S_lavender_Matin_Table_Lamp_L_white_Bottoms_Up_Vase_L_navy_blue_1_a874d15c-b8d4-4479-ae59-93e1c86f528d.jpg?v=1657541833&width=600',
-  //   description:
-  //     "At HAY, we are motivated by a love of design and a commitment to constant innovation. We are always challenging ourselves to create products that elevate the modest moments in peoples' lives. This means thinking about everyday items in new, original ways, using the most cutting-edge materials, methods, tools, and technologies available.",
-  // },
-  // {
-  //   smallTitle: 'Function',
-  //   title: 'The best solution',
-  //   image:
-  //     'https://impact-theme-home.myshopify.com/cdn/shop/files/Shade_Bin_01_1.jpg?v=1657541988&width=600',
-  //   description:
-  //     'At HAY, form will always follow function. Our products are beautiful, sleek, fresh, and stylish - but we believe that use and comfort should come first. Our designs always prioritize what is essential: we believe the simplest solution is usually the best solution.',
-  // },
+  {
+    smallTitle: 'Passion',
+    title: 'Love of design',
+    image:
+      'https://impact-theme-home.myshopify.com/cdn/shop/files/Matin_Table_Lamp_S_lavender_Matin_Table_Lamp_L_white_Bottoms_Up_Vase_L_navy_blue_1_a874d15c-b8d4-4479-ae59-93e1c86f528d.jpg?v=1657541833&width=600',
+    description:
+      "At HAY, we are motivated by a love of design and a commitment to constant innovation. We are always challenging ourselves to create products that elevate the modest moments in peoples' lives. This means thinking about everyday items in new, original ways, using the most cutting-edge materials, methods, tools, and technologies available.",
+  },
+  {
+    smallTitle: 'Function',
+    title: 'The best solution',
+    image:
+      'https://impact-theme-home.myshopify.com/cdn/shop/files/Shade_Bin_01_1.jpg?v=1657541988&width=600',
+    description:
+      'At HAY, form will always follow function. Our products are beautiful, sleek, fresh, and stylish - but we believe that use and comfort should come first. Our designs always prioritize what is essential: we believe the simplest solution is usually the best solution.',
+  },
 ];
 
 export const RoomData: any[] = [

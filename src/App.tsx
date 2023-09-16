@@ -10,14 +10,13 @@ function App() {
   const appDevice = useAppSelector(selectAppDevice);
 
   React.useEffect(() => {
-    dispatch(initialDevice(DEVICES.MOBILE));
-    // if (appDevice.isFirstLoad) {
-    //   if (window.innerWidth <= 768) {
-    //     dispatch(initialDevice(DEVICES.MOBILE));
-    //   } else {
-    //     dispatch(initialDevice(DEVICES.DESKTOP));
-    //   }
-    // }
+    if (appDevice.isFirstLoad) {
+      if (window.innerWidth <= 768) {
+        dispatch(initialDevice(DEVICES.MOBILE));
+      } else {
+        dispatch(initialDevice(DEVICES.DESKTOP));
+      }
+    }
 
     const vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);

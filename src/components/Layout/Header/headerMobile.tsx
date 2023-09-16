@@ -43,7 +43,7 @@ const HeaderMobile = () => {
 
   return (
     <Wrapper id={'header'} isBackground={isBackground}>
-      <MenuWrapper className={'inner'}>
+      <MenuWrapper>
         <MenuList>
           <IconWrapper>
             <HambergerIcon width={22} height={22}></HambergerIcon>

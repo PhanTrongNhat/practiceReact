@@ -92,7 +92,7 @@ export const InfoWrapper = styled.div`
 
 export const Info = styled.div`
   text-align: center;
-  min-height: 240px;
+  //min-height: 240px;
 `;
 
 export const Image = styled.img<{ index: number; active: boolean }>`
@@ -183,8 +183,9 @@ export const Description = styled.p<{ active: boolean }>`
 
 export const ButtonWrapper = styled.div<{ hidden: boolean }>`
   display: ${p => (p.hidden ? 'none' : 'flex')};
-  position: absolute;
-  bottom: -40px;
+  //position: absolute;
+  //bottom: -40px;
+  margin-top: 24px;
   justify-content: center;
   gap: 1rem;
   z-index: 10;

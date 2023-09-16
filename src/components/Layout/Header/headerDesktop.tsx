@@ -42,7 +42,7 @@ const HeaderDesktop = () => {
 
   return (
     <Wrapper id={'header'} isBackground={isBackground}>
-      <MenuWrapper className={'inner'}>
+      <MenuWrapper>
         <MenuList>
           <MenuItem>
             Shop

@@ -7,7 +7,6 @@ import {
   Image,
   DotWrapper,
   Dot,
-  Title,
 } from './styled';
 
 import React from 'react';
@@ -36,7 +35,6 @@ const RoomDesktop = () => {
 
   return (
     <Wrapper>
-      <Title>Shop the room</Title>
       <ImageWrapper>
         <Image
           alt={'image'}

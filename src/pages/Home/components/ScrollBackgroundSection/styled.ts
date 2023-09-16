@@ -5,6 +5,8 @@ export const Wrapper = styled.div`
   position: relative;
   background-color: transparent;
   z-index: 1000;
+  width: 100%;
+  //overflow: hidden;
 `;
 
 export const ScrollImage = styled.div<{
@@ -36,6 +38,7 @@ export const ImageWrapper = styled.div`
 export const Image = styled.img<{ scale: number }>`
   height: 100%;
   position: absolute;
+  width: 100%;
   transform: scale(${p => p.scale});
 `;
 

@@ -22,7 +22,7 @@ import styled from 'styled-components';
 const HomeDesktop = () => {
   return (
     <>
-      <PromotionSection></PromotionSection>
+      {/*<PromotionSection></PromotionSection>*/}
       <Header></Header>
       <CarouselSection></CarouselSection>
       <ArrivalsSection></ArrivalsSection>
