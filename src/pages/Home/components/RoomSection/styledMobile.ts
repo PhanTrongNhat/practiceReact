@@ -1,8 +1,16 @@
 import styled, { keyframes } from 'styled-components';
 
 export const Wrapper = styled.div`
-  padding: 0px var(--space-side) var(--space-top);
+  padding: var(--space-top) var(--space-side);
   display: flex;
+  flex-direction: column;
+`;
+
+export const Title = styled.h2`
+  line-height: 35px;
+  font-weight: ${p => p.theme.font.weight.bold};
+  font-size: 32px;
+  margin-bottom: 2rem;
 `;
 
 const ProductAnimation = keyframes`
@@ -11,17 +19,19 @@ const ProductAnimation = keyframes`
 `;
 
 export const ProductsWrapper = styled.div<{ active: boolean }>`
-  position: absolute;
-  opacity: ${p => (p.active ? 1 : 0)};
-  animation: ${p => (p.active ? ProductAnimation : '')} linear 0.5s;
+  //position: absolute;
+  width: 80vw;
+  gap: 0.5rem;
 `;
 
 export const InfoWrapper = styled.div`
   position: relative;
-  flex: 1;
-
-  display: flex;
+  overflow: scroll;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   justify-content: center;
+  z-index: 10;
+  gap: 0.5rem;
 `;
 
 export const ButtonWrapper = styled.div`
@@ -30,13 +40,6 @@ export const ButtonWrapper = styled.div`
   gap: 1rem;
 
   bottom: -3rem;
-`;
-
-export const Title = styled.h2`
-  line-height: 44px;
-  font-weight: ${p => p.theme.font.weight.bold};
-  font-size: 40px;
-  margin-bottom: 2rem;
 `;
 
 export const ImageWrapper = styled.div`

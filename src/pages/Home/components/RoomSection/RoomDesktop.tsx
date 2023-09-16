@@ -7,11 +7,12 @@ import {
   Image,
   DotWrapper,
   Dot,
+  Title,
 } from './styled';
 
 import React from 'react';
 import { RoomData } from '../../data';
-import ProductCart from '../ArrivalsSection/ProductCart';
+import Index from '../../../../components/ProductCard';
 import { ArrowButton } from 'components';
 
 const RoomDesktop = () => {
@@ -35,6 +36,7 @@ const RoomDesktop = () => {
 
   return (
     <Wrapper>
+      <Title>Shop the room</Title>
       <ImageWrapper>
         <Image
           alt={'image'}
@@ -54,7 +56,7 @@ const RoomDesktop = () => {
         {RoomData?.map((item, index) => {
           return (
             <ProductsWrapper active={index == active}>
-              <ProductCart
+              <Index
                 key={index}
                 title={item.title}
                 branch={item.branch}

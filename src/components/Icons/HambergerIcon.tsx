@@ -3,7 +3,7 @@ import * as React from 'react';
 import { theme } from 'styled';
 import { IconProps } from './Icons';
 
-export const SearchIcon = ({
+export const HambergerIcon = ({
   width,
   height,
   className,
@@ -19,15 +19,13 @@ export const SearchIcon = ({
       focusable="false"
       width={width || DEFAULT_WIDTH}
       height={height || DEFAULT_COLOR}
-      className="icon icon-search"
+      className="icon icon-hamburger"
       viewBox="0 0 22 22"
     >
-      <circle cx="11" cy="10" r="7" fill="none" stroke="currentColor"></circle>
       <path
-        d="m16 15 3 3"
+        d="M1 5h20M1 11h20M1 17h20"
         stroke="currentColor"
         stroke-linecap="round"
-        stroke-linejoin="round"
       ></path>
     </svg>
   );

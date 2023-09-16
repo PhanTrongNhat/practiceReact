@@ -3,7 +3,7 @@ import * as React from 'react';
 import { theme } from 'styled';
 import { IconProps } from './Icons';
 
-export const SearchIcon = ({
+export const CartIcon = ({
   width,
   height,
   className,
@@ -19,12 +19,12 @@ export const SearchIcon = ({
       focusable="false"
       width={width || DEFAULT_WIDTH}
       height={height || DEFAULT_COLOR}
-      className="icon icon-search"
+      className="icon icon-cart"
       viewBox="0 0 22 22"
     >
-      <circle cx="11" cy="10" r="7" fill="none" stroke="currentColor"></circle>
       <path
-        d="m16 15 3 3"
+        d="M11 7H3.577A2 2 0 0 0 1.64 9.497l2.051 8A2 2 0 0 0 5.63 19H16.37a2 2 0 0 0 1.937-1.503l2.052-8A2 2 0 0 0 18.422 7H11Zm0 0V1"
+        fill="none"
         stroke="currentColor"
         stroke-linecap="round"
         stroke-linejoin="round"

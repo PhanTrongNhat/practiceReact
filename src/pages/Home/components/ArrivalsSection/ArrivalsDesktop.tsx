@@ -14,7 +14,7 @@ import {
 } from './styled';
 import { MobileChevronMajor } from '@shopify/polaris-icons';
 import React from 'react';
-import ProductCart from './ProductCart';
+import Index from '../../../../components/ProductCard';
 import { ProductsData } from 'pages/Home/data';
 
 import { ArrowButton } from 'components';
@@ -88,7 +88,7 @@ const ArrivalsDesktop = () => {
         <ProductWrapper id={'product-wrapper'}>
           {ProductsData?.map((item, index) => {
             return (
-              <ProductCart
+              <Index
                 key={index}
                 title={item.title}
                 branch={item.branch}

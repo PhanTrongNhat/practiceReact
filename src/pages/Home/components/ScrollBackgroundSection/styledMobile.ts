@@ -4,7 +4,6 @@ export const Wrapper = styled.div`
   height: 300vh;
   position: relative;
   background-color: transparent;
-  z-index: 1000;
 `;
 
 export const ScrollImage = styled.div<{
@@ -34,13 +33,16 @@ export const ImageWrapper = styled.div`
 `;
 
 export const Image = styled.img<{ scale: number }>`
+  width: 100%;
   height: 100%;
   position: absolute;
+  object-fit: cover;
   transform: scale(${p => p.scale});
 `;
 
 export const Title = styled.p`
-  font-size: 80px;
+  font-size: 48px;
+  line-height: 48px;
   font-weight: ${p => p.theme.font.weight.bold};
   text-align: center;
   max-width: 85vw;

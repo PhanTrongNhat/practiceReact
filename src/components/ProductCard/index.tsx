@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components';
-import { StarIcon } from 'components';
+import { StarIcon } from 'components/index';
 import { devices } from 'utils';
 
 interface ProductCartProps {
@@ -15,7 +15,7 @@ interface ProductCartProps {
   save?: string;
 }
 
-const ProductCart = ({
+const ProductCard = ({
   title,
   branch,
   colors,
@@ -63,7 +63,7 @@ const ProductCart = ({
   );
 };
 
-export default ProductCart;
+export default ProductCard;
 
 const ImageAnimation = keyframes`
   from{

@@ -13,3 +13,5 @@ export { default as StoriesSection } from './StoriesSection';
 export { default as FeatureSection } from './FeatureSection';
 export { default as RoomSection } from './RoomSection';
 export { default as ScrollBackgroundSection } from './ScrollBackgroundSection';
+export { default as AboutSection } from './AboutSection';
+export { default as ServiceSection } from './ServiceSection';

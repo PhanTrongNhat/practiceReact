@@ -15,36 +15,41 @@ export const Content = styled.div`
 
 export const SmallTitle = styled.h2`
   color: rgb(39, 39, 39);
-  font-size: ${p => p.theme.font.size.xs};
+  font-size: ${p => p.theme.font.size.sm};
   font-weight: ${p => p.theme.font.weight.bold};
-  line-height: 22px;
+  line-height: 25px;
 `;
 
 export const Title = styled.h2`
-  font-size: 40px;
+  font-size: 48px;
   font-weight: ${p => p.theme.font.weight.bold};
-  line-height: 44px;
+  line-height: 53px;
   color: rgb(39, 39, 39);
-  margin-top: 16px;
+  margin-top: 32px;
 `;
 
 export const Description = styled.p`
-  margin-top: 20px;
+  margin-top: 32px;
   color: rgba(39, 39, 39, o.12);
   font-weight: ${p => p.theme.font.weight.regular};
-  font-size: ${p => p.theme.font.size.xs};
-  line-height: 22px;
+  font-size: ${p => p.theme.font.size.sm};
+  line-height: 25px;
   text-align: center;
 `;
 
 export const Button = styled.button`
-  margin-top: 24px;
-  padding: 16px 32px;
+  margin-top: 32px;
+  padding: 17px 40px;
   font-weight: ${p => p.theme.font.weight.bold};
-  font-size: ${p => p.theme.font.size.xs};
-  line-height: 22px;
+  font-size: ${p => p.theme.font.size.sm};
+  line-height: 25px;
   color: rgb(39, 39, 39);
   border: 2px solid rgb(39, 39, 39);
   background-color: transparent;
   cursor: pointer;
+
+  &:hover {
+    background-color: rgb(39, 39, 39);
+    color: white;
+  }
 `;

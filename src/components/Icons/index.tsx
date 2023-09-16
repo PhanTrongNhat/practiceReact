@@ -23,3 +23,5 @@ export { AmericanExpressIcon } from './AmericanExpressIcon';
 export { PayPalIcon } from './PayPalIcon';
 export { DinerClubIcon } from './DinerClubIcon';
 export { EmailIcon } from './EmailIcon';
+export { CartIcon } from './CartIcon';
+export { HambergerIcon } from './HambergerIcon';

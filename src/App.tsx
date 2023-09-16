@@ -10,13 +10,14 @@ function App() {
   const appDevice = useAppSelector(selectAppDevice);
 
   React.useEffect(() => {
-    if (appDevice.isFirstLoad) {
-      if (window.innerWidth <= 768) {
-        dispatch(initialDevice(DEVICES.MOBILE));
-      } else {
-        dispatch(initialDevice(DEVICES.DESKTOP));
-      }
-    }
+    dispatch(initialDevice(DEVICES.MOBILE));
+    // if (appDevice.isFirstLoad) {
+    //   if (window.innerWidth <= 768) {
+    //     dispatch(initialDevice(DEVICES.MOBILE));
+    //   } else {
+    //     dispatch(initialDevice(DEVICES.DESKTOP));
+    //   }
+    // }
 
     const vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -24,7 +25,7 @@ function App() {
 
   return (
     <div className="App">
-      <Theme></Theme>
+      {/*<Theme></Theme>*/}
       <Home></Home>
       <Footer></Footer>
     </div>

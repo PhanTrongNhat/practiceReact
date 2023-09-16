@@ -9,15 +9,15 @@ import {
   ScrollBackgroundSection,
   SignUpSection,
   StoriesSection,
+  ArrivalsSection,
+  AboutSection,
+  CollectionSection,
+  CustomerSection,
+  ServiceSection,
+  DesignerSection,
+  CarouselSection,
 } from './components';
-import { CarouselSection } from './components';
-import ArrivalsSection from './components/ArrivalsSection';
-import AboutSection from './components/AboutSection';
-import CollectionSection from './components/CollectionSection';
-import CustomerDesktop from './components/CustomerSection/CustomerDesktop';
-import DesignerSection from './components/DesignerSection';
 import styled from 'styled-components';
-import ServiceSection from './components/ServiceSection';
 
 const HomeDesktop = () => {
   return (
@@ -30,8 +30,7 @@ const HomeDesktop = () => {
       <AboutSection></AboutSection>
       <CollectionSection></CollectionSection>
       <ScrollBackgroundSection></ScrollBackgroundSection>
-
-      <CustomerDesktop></CustomerDesktop>
+      <CustomerSection></CustomerSection>
       <RoomSection></RoomSection>
       <SignUpSection></SignUpSection>
       <DesignerSection></DesignerSection>
@@ -56,7 +55,5 @@ const Banner = styled.img`
   transform-origin: bottom;
   height: 43vw;
 `;
-
-const Slider = styled.div``;
 
 export default HomeDesktop;

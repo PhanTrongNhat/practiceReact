@@ -3,6 +3,7 @@ import { selectAppDevice } from 'slice';
 import { DEVICES } from 'utils';
 import HomeDesktop from './homeDesktop';
 import HomeMobile from './homeMobile';
+import React from 'react';
 
 const Home = () => {
   const appDevice = useAppSelector(selectAppDevice);
@@ -12,6 +13,7 @@ const Home = () => {
     [DEVICES.TABLET]: <HomeMobile></HomeMobile>,
     [DEVICES.MOBILE]: <HomeMobile></HomeMobile>,
   };
+
   return renderElement[appDevice.device];
 };
 

@@ -13,9 +13,9 @@ export const Content = styled.div`
 `;
 
 export const Count = styled.h2`
-  font-size: calc(min(20vw, 65px) * 1.1);
+  font-size: 195px;
   font-weight: ${p => p.theme.font.weight.bold};
-  line-height: 72px;
+  line-height: 195px;
   background: linear-gradient(
     45deg,
     rgba(60, 97, 158, 1) 4%,
@@ -23,21 +23,20 @@ export const Count = styled.h2`
   );
   -webkit-background-clip: text;
   color: transparent;
-  margin-bottom: 0.2em;
 `;
 
 export const Title = styled.h3`
-  font-size: 22px;
-  line-height: 28px;
+  font-size: 26px;
+  line-height: 33px;
   font-weight: ${p => p.theme.font.weight.bold};
   color: rgb(39, 39, 39);
 `;
 
 export const Description = styled.p`
   font-weight: ${p => p.theme.font.weight.regular};
-  font-size: ${p => p.theme.font.size.xs};
-  line-height: 22px;
+  font-size: ${p => p.theme.font.size.sm};
+  line-height: 25px;
   color: rgb(39, 39, 39);
-  margin-top: 20px;
+  max-width: 760px;
   text-align: center;
 `;

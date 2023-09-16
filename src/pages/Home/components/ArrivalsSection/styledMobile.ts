@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   padding: var(--space-top) var(--space-side);
   display: flex;
   flex-direction: column;
-  gap: 3rem 4.5rem;
+  gap: 2rem 1.25rem;
 
   @media only screen and ${devices.xxl} {
     padding: 80px 48px;
@@ -17,22 +17,23 @@ export const TitleWrapper = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-size: 40px;
+  font-size: 32px;
   font-weight: ${p => p.theme.font.weight.bold};
-  line-height: 44px;
+  line-height: 35px;
 `;
 
 export const Description = styled.p`
-  margin-top: 2rem;
+  margin-top: 20px;
   font-weight: ${p => p.theme.font.weight.regular};
-  font-size: ${p => p.theme.font.size.sm};
+  font-size: ${p => p.theme.font.size.xs};
+  line-height: 22px;
   color: rgb(39, 39, 39);
 `;
 
 export const HeaderWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  gap: 1rem;
+  flex-direction: column;
 `;
 
 export const ViewAll = styled.div`
@@ -41,7 +42,8 @@ export const ViewAll = styled.div`
 
   p {
     color: rgb(39, 39, 39);
-    font-size: ${p => p.theme.font.size.sm};
+    font-size: ${p => p.theme.font.size.xs};
+    line-height: 22px;
     font-weight: ${p => p.theme.font.weight.regular};
   }
 
