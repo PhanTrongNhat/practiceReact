@@ -8,6 +8,7 @@ import { RoomData } from '../../data';
 
 export type RoomType = {
   active: number;
+  handleChangeActive?: (e: number) => void;
   handleChangeLeft?: () => void;
   handleChangeRight?: () => void;
 };
@@ -32,6 +33,10 @@ const RoomSection = () => {
     }
   };
 
+  const handleChangeActive = (e: number) => {
+    setActive(e);
+  };
+
   const renderElement = {
     [DEVICES.DESKTOP]: (
       <RoomDesktop
@@ -40,8 +45,18 @@ const RoomSection = () => {
         handleChangeLeft={handleChangeLeft}
       ></RoomDesktop>
     ),
-    [DEVICES.TABLET]: <RoomMobile active={active}></RoomMobile>,
-    [DEVICES.MOBILE]: <RoomMobile active={active}></RoomMobile>,
+    [DEVICES.TABLET]: (
+      <RoomMobile
+        active={active}
+        handleChangeActive={handleChangeActive}
+      ></RoomMobile>
+    ),
+    [DEVICES.MOBILE]: (
+      <RoomMobile
+        active={active}
+        handleChangeActive={handleChangeActive}
+      ></RoomMobile>
+    ),
   };
 
   return renderElement[appDevice.device];

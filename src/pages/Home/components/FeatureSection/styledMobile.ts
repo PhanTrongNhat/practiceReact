@@ -1,22 +1,23 @@
 import styled, { keyframes } from 'styled-components';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<{ height?: number }>`
   padding: var(--space-top) var(--space-side);
   width: 100%;
-  height: calc(100vh + 1rem + 12px);
+  height: calc(${p => `${p.height}px`} + 10vh);
   position: absolute;
   bottom: 0px;
   background-color: white;
 `;
 
 export const Content = styled.div`
-  display: grid;
+  display: flex;
   gap: 2rem;
   position: absolute;
   flex-direction: column;
+  justify-content: space-between;
   top: 0px;
-  grid-template-columns: 1fr;
-  grid-template-rows: 50vh;
+  //grid-template-columns: 1fr;
+  //grid-template-rows: 50vh max-content;
 `;
 
 const ImageAnimation1 = keyframes`
@@ -85,9 +86,10 @@ export const ImageWrapper = styled.div`
 
 export const InfoWrapper = styled.div`
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
   flex: 14;
-  position: relative;
+  //position: relative;
 `;
 
 export const Info = styled.div`
@@ -183,11 +185,10 @@ export const Description = styled.p<{ active: boolean }>`
 
 export const ButtonWrapper = styled.div<{ hidden: boolean }>`
   display: ${p => (p.hidden ? 'none' : 'flex')};
-  //position: absolute;
-  //bottom: -40px;
+
   margin-top: 24px;
   justify-content: center;
   gap: 1rem;
-  z-index: 10;
+  z-index: 100;
   width: 100%;
 `;

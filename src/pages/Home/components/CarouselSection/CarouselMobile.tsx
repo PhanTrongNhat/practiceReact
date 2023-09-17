@@ -55,7 +55,7 @@ const CarouselMobile = ({
       })}
       <ButtonWrapper>
         <ArrowButton
-          width={'56px'}
+          width={'42px'}
           iconWidth={25}
           isArrowRight={false}
           handleClick={() => handleChangeLeft()}
@@ -64,7 +64,7 @@ const CarouselMobile = ({
           color={'#fff'}
         ></ArrowButton>
         <ArrowButton
-          width={'56px'}
+          width={'42px'}
           iconWidth={25}
           isArrowRight={true}
           handleClick={() => handleChangeRight()}

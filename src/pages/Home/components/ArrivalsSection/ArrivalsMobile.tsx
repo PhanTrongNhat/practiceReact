@@ -1,5 +1,4 @@
 import {
-  ButtonWrapper,
   Description,
   HeaderWrapper,
   MobileChevronMajorWrapper,
@@ -14,7 +13,7 @@ import {
 } from './styledMobile';
 import { MobileChevronMajor } from '@shopify/polaris-icons';
 import { ProductsData } from '../../data';
-import { ArrowButton, ProductCard } from 'components';
+import { ProductCard } from 'components';
 import React from 'react';
 import { ArrivalsType } from './index';
 
@@ -23,6 +22,7 @@ const CarouselMobile = ({
   percentInit,
   handleChangeLeft,
   handleChangeRight,
+  handleScrollProduct,
 }: ArrivalsType) => {
   return (
     <Wrapper>
@@ -47,7 +47,10 @@ const CarouselMobile = ({
         </ViewAll>
       </HeaderWrapper>
       <ProductCarousel>
-        <ProductWrapper id={'product-wrapper'}>
+        <ProductWrapper
+          id={'product-wrapper'}
+          onScroll={() => handleScrollProduct()}
+        >
           {ProductsData?.map((item, index) => {
             return (
               <ProductCard
@@ -68,26 +71,26 @@ const CarouselMobile = ({
         </ProductWrapper>
         <StatusAndChangeCarousel>
           <Status percent={percent}></Status>
-          <ButtonWrapper>
-            <ArrowButton
-              width={'48px'}
-              iconWidth={20}
-              isArrowRight={false}
-              handleClick={() => handleChangeLeft()}
-              noneEvent={percent == percentInit}
-              borderColor={'#f1f1f1'}
-              color={'#272727'}
-            ></ArrowButton>{' '}
-            <ArrowButton
-              width={'48px'}
-              iconWidth={20}
-              isArrowRight={true}
-              handleClick={() => handleChangeRight()}
-              noneEvent={percent == 100}
-              borderColor={'#f1f1f1'}
-              color={'#272727'}
-            ></ArrowButton>
-          </ButtonWrapper>
+          {/*<ButtonWrapper>*/}
+          {/*  <ArrowButton*/}
+          {/*    width={'48px'}*/}
+          {/*    iconWidth={20}*/}
+          {/*    isArrowRight={false}*/}
+          {/*    handleClick={() => handleChangeLeft()}*/}
+          {/*    noneEvent={percent == percentInit}*/}
+          {/*    borderColor={'#f1f1f1'}*/}
+          {/*    color={'#272727'}*/}
+          {/*  ></ArrowButton>{' '}*/}
+          {/*  <ArrowButton*/}
+          {/*    width={'48px'}*/}
+          {/*    iconWidth={20}*/}
+          {/*    isArrowRight={true}*/}
+          {/*    handleClick={() => handleChangeRight()}*/}
+          {/*    noneEvent={percent == 100}*/}
+          {/*    borderColor={'#f1f1f1'}*/}
+          {/*    color={'#272727'}*/}
+          {/*  ></ArrowButton>*/}
+          {/*</ButtonWrapper>*/}
         </StatusAndChangeCarousel>
       </ProductCarousel>
     </Wrapper>

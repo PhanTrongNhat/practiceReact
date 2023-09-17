@@ -14,7 +14,22 @@ import { ProductCardMobile } from 'components';
 import React from 'react';
 import { RoomType } from './index';
 
-const RoomMobile = ({ active }: RoomType) => {
+const RoomMobile = ({ active, handleChangeActive }: RoomType) => {
+  const handleScroll = () => {
+    const room = window.document.getElementById('room-carousel');
+
+    if (room && handleChangeActive) {
+      if (
+        room.scrollLeft != 0 &&
+        window.document.body.clientWidth / room.scrollLeft < 2
+      ) {
+        handleChangeActive(1);
+      } else {
+        handleChangeActive(0);
+      }
+    }
+  };
+
   return (
     <Wrapper>
       <Title>Shop the room</Title>
@@ -34,7 +49,7 @@ const RoomMobile = ({ active }: RoomType) => {
         </DotWrapper>
       </ImageWrapper>
 
-      <InfoWrapper>
+      <InfoWrapper id={'room-carousel'} onScroll={() => handleScroll()}>
         {RoomData?.map((item, index) => {
           return (
             <ProductsWrapper active={index == active}>
@@ -54,27 +69,6 @@ const RoomMobile = ({ active }: RoomType) => {
             </ProductsWrapper>
           );
         })}
-
-        {/*<ButtonWrapper>*/}
-        {/*  <ArrowButton*/}
-        {/*    width={'48px'}*/}
-        {/*    iconWidth={15}*/}
-        {/*    isArrowRight={false}*/}
-        {/*    handleClick={() => handleChangeLeft()}*/}
-        {/*    noneEvent={false}*/}
-        {/*    borderColor={'#f1f1f1'}*/}
-        {/*    color={'#272727'}*/}
-        {/*  ></ArrowButton>*/}
-        {/*  <ArrowButton*/}
-        {/*    width={'48px'}*/}
-        {/*    iconWidth={15}*/}
-        {/*    isArrowRight={true}*/}
-        {/*    handleClick={() => handleChangeRight()}*/}
-        {/*    noneEvent={false}*/}
-        {/*    borderColor={'#f1f1f1'}*/}
-        {/*    color={'#272727'}*/}
-        {/*  ></ArrowButton>*/}
-        {/*</ButtonWrapper>*/}
       </InfoWrapper>
     </Wrapper>
   );

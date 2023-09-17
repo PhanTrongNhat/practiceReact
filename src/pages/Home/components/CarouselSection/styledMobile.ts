@@ -78,8 +78,8 @@ export const Title = styled.h1<{ active: boolean }>`
 
 export const SecondTitle = styled.h1<{ active: boolean }>`
   font-weight: ${p => p.theme.font.weight.bold};
-  font-size: 64px;
-  line-height: 64px;
+  font-size: 46px;
+  line-height: 46px;
   visibility: ${p => (p.active ? 'visible' : 'hidden')};
 
   animation: ${p => (p.active ? TitleAnimation : '')} 0.4s ease-in-out;

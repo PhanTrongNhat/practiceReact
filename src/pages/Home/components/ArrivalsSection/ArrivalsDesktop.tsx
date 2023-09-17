@@ -25,6 +25,7 @@ const ArrivalsDesktop = ({
   percentInit,
   handleChangeLeft,
   handleChangeRight,
+  handleScrollProduct,
 }: ArrivalsType) => {
   return (
     <Wrapper>
@@ -49,7 +50,10 @@ const ArrivalsDesktop = ({
         </ViewAll>
       </HeaderWrapper>
       <ProductCarousel>
-        <ProductWrapper id={'product-wrapper'}>
+        <ProductWrapper
+          onScroll={() => handleScrollProduct()}
+          id={'product-wrapper'}
+        >
           {ProductsData?.map((item, index) => {
             return (
               <ProductCard

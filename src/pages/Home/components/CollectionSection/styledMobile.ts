@@ -70,6 +70,7 @@ export const CollectionWrapper = styled.div`
   align-items: center;
   position: relative;
   scroll-behavior: smooth;
+  scroll-behavior: smooth;
 
   &::-webkit-scrollbar {
     display: none;
@@ -137,6 +138,10 @@ export const CollectionItemWrapper = styled.div`
 
   &:first-child {
     margin-left: var(--space-side);
+  }
+
+  &:last-child {
+    margin-right: var(--space-side);
   }
 `;
 

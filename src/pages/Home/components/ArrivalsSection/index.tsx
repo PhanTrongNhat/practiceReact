@@ -10,12 +10,24 @@ export type ArrivalsType = {
   percentInit: number;
   handleChangeLeft: () => void;
   handleChangeRight: () => void;
+  handleScrollProduct: () => void;
 };
 
 const ArrivalsSection = () => {
   const [percent, setPercent] = React.useState(0);
   const [percentInit, setPercentInit] = React.useState(0);
   const appDevice = useAppSelector(selectAppDevice);
+
+  const handleScrollProduct = () => {
+    const productsWrapper = window.document.getElementById('product-wrapper');
+
+    if (productsWrapper) {
+      setPercent(
+        ((productsWrapper.scrollLeft + productsWrapper.offsetWidth) * 100) /
+          productsWrapper.scrollWidth
+      );
+    }
+  };
 
   const handleChangeLeft = () => {
     const productsWrapper = window.document.getElementById('product-wrapper');
@@ -63,6 +75,7 @@ const ArrivalsSection = () => {
         percentInit={percentInit}
         handleChangeLeft={handleChangeLeft}
         handleChangeRight={handleChangeRight}
+        handleScrollProduct={handleScrollProduct}
       ></ArrivalsDesktop>
     ),
     [DEVICES.TABLET]: (
@@ -71,6 +84,7 @@ const ArrivalsSection = () => {
         percentInit={percentInit}
         handleChangeLeft={handleChangeLeft}
         handleChangeRight={handleChangeRight}
+        handleScrollProduct={handleScrollProduct}
       ></ArrivalsMobile>
     ),
     [DEVICES.MOBILE]: (
@@ -79,6 +93,7 @@ const ArrivalsSection = () => {
         percentInit={percentInit}
         handleChangeLeft={handleChangeLeft}
         handleChangeRight={handleChangeRight}
+        handleScrollProduct={handleScrollProduct}
       ></ArrivalsMobile>
     ),
   };

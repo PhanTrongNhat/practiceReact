@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
 export const LogoImage = styled.img`
   height: 32px;
   width: 150px;
+  margin-bottom: 2rem;
 `;
 
 export const Content = styled.div`
@@ -24,6 +25,7 @@ export const Description = styled.h3`
   font-weight: ${p => p.theme.font.weight.bold};
   font-size: 32px;
   line-height: 38px;
+  margin-bottom: 1.5rem;
 `;
 
 export const EmailInput = styled.input`

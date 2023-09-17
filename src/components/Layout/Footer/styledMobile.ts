@@ -2,13 +2,13 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   background-color: rgb(242, 242, 242);
-  padding: 48px 20px;
+  padding: var(--space-top) var(--space-side);
 `;
 
 export const LogoImage = styled.img`
   height: 32px;
   width: 150px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 `;
 
 export const Content = styled.div`
@@ -25,9 +25,9 @@ export const LogoWrapper = styled.div`
 
 export const Description = styled.h3`
   font-weight: ${p => p.theme.font.weight.bold};
-  font-size: 32px;
-  line-height: 38px;
-  margin-bottom: 0.75rem;
+  font-size: ${p => p.theme.font.size.lg};
+  line-height: 28px;
+  margin-bottom: 1.5rem;
 `;
 
 export const EmailInput = styled.input`
@@ -79,8 +79,8 @@ export const List = styled.ul`
 export const Item = styled.li`
   color: rgb(39, 39, 39);
   opacity: 0.7;
-  font-size: ${p => p.theme.font.size.sm};
-  line-height: 25px;
+  font-size: ${p => p.theme.font.size.xs};
+  line-height: 22px;
   font-weight: ${p => p.theme.font.weight.regular};
 
   a {
@@ -93,14 +93,15 @@ export const Item = styled.li`
 export const ListWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
   flex-basis: 100%;
 `;
 
 export const Title = styled.p`
   font-weight: ${p => p.theme.font.weight.bold};
-  font-size: ${p => p.theme.font.size.sm};
+  font-size: ${p => p.theme.font.size.xs};
   color: rgb(39, 39, 39);
+  line-height: 22px;
 `;
 
 export const SocialWrapper = styled.div`
@@ -149,6 +150,8 @@ export const Select = styled.select`
   border: none;
   background-color: transparent;
   box-sizing: unset;
+
+  font-weight: ${p => p.theme.font.weight.bold};
 `;
 
 export const Option = styled.option`
@@ -161,7 +164,7 @@ export const CopyrightPaymentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  margin-top: 3rem;
+  margin-top: 2.5rem;
 `;
 
 export const IconPaymentWrapper = styled.div`
@@ -170,8 +173,8 @@ export const IconPaymentWrapper = styled.div`
 `;
 
 export const Copyright = styled.p`
-  font-size: ${p => p.theme.font.size.xs};
+  font-size: ${p => p.theme.font.size.xxs};
   font-weight: ${p => p.theme.font.weight.regular};
-  line-height: 22px;
+  line-height: 19px;
   color: rgba(39, 39, 39, 0.7);
 `;

@@ -1,15 +1,10 @@
 import styled, { keyframes } from 'styled-components';
-import { devices } from 'utils/constants';
 
 export const Wrapper = styled.div`
   padding: var(--space-top) var(--space-side);
   display: flex;
   flex-direction: column;
   gap: 2rem 1.25rem;
-
-  @media only screen and ${devices.xxl} {
-    padding: 80px 48px;
-  }
 `;
 
 export const TitleWrapper = styled.div`
