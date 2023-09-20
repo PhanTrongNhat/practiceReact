@@ -1,4 +1,4 @@
-import { Content, Count, Description, Title, Wrapper } from './styled';
+import { Content, Count, Description, Title, Wrapper } from './styledMobile';
 import React from 'react';
 import { KindOfDesignType } from './index';
 

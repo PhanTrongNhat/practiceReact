@@ -7,7 +7,7 @@ export const Wrapper = styled.div<{ isBackground: boolean }>`
   padding: 50px 32px;
   position: absolute;
   width: 100%;
-  z-index: 1000;
+  z-index: 1001;
   color: white;
 
   svg {
